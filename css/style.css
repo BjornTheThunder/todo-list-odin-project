@@ -398,3 +398,41 @@ body {
 .input-group label {
     margin-top: 12px;
 }
+
+.todo-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.header-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Material UI Icon Button Style */
+.btn-icon-delete {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, color 0.2s;
+    margin-top: -4px; /* Align visually with the top of the title */
+    margin-right: -8px;
+}
+
+.btn-icon-delete:hover {
+    background-color: #fff1f1;
+    color: #d32f2f; /* MUI Error Red */
+}
+
+.btn-icon-delete .material-icons {
+    font-size: 22px;
+}

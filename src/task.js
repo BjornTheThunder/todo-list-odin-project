@@ -48,3 +48,12 @@ saveTaskBtn.addEventListener('click', () => {
 closeTaskBtn.addEventListener('click', () => {
   taskModal.classList.remove('active');
 });
+
+
+export function removeTaskFromData(title) {
+  const currentProject = getProjectById(activeProjectId);
+
+  currentProject.items = currentProject.items.filter(item => item.title !== title);
+
+  updateUI();
+}
