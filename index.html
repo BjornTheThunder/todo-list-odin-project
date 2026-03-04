@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Todo - Odin Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="material-icons">assignment</span>
+                <h2>Projects</h2>
+            </div>
+            <nav class="project-list" id="project-list">
+                <!--<div class="project-item active">
+                    <div class="project-info">
+                        <span class="project-title">Website Redesign</span>
+                        <span class="project-date">Due: Oct 12, 2026</span>
+                    </div>
+                </div>--> 
+            </nav>
+            <button class="add-project-btn">
+                <span class="material-icons">add</span> Add Project
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <header class="content-header" id="content-header">
+                <h1 id="selected-project-title">Website Redesign</h1>
+                <div class="header-actions">
+                    <button class="btn-outline-danger" id="delete-project-btn">
+                        <span class="material-icons">delete</span> Delete Project
+                    </button>
+
+                    <button class="btn-primary">
+                        <span class="material-icons">add</span> New Task
+                    </button>
+                </div>
+            </header>
+
+            <section class="todo-grid" id="todo-items">
+                <!--<article class="todo-card">
+                    <div class="todo-card-header">
+                        <h3>Design Homepage Hero</h3>
+                        <span class="chip high-priority">Due: Oct 10</span>
+                    </div>
+                    <p class="todo-description">Create high-fidelity mockups for the landing page hero section including the call to action.</p>
+                    
+                    <div class="todo-notes">
+                        <h4>Notes</h4>
+                        <div class="note-item">
+                            <p>Check the brand guidelines for the new gradient colors.</p>
+                            <span class="note-date">Added on Oct 01, 2026</span>
+                        </div>
+                        <div class="note-item">
+                            <p>Client wants a "bolder" font for the H1.</p>
+                            <span class="note-date">Added on Oct 02, 2026</span>
+                        </div>
+                    </div>
+                </article>-->
+            </section>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-card">
+          <h3>Create New Project</h3>
+          <p>Set a name and deadline for your new project.</p>
+          
+          <div class="input-group">
+              <label for="projectNameInput">Project Name</label>
+              <input type="text" id="projectNameInput" placeholder="e.g., Website Launch" autofocus>
+          </div>
+
+          <div class="input-group">
+              <label for="projectDateInput">Due Date</label>
+              <input type="date" id="projectDateInput">
+          </div>
+
+          <div class="modal-actions">
+              <button class="btn-text" id="closeModal">Cancel</button>
+              <button class="btn-primary" id="saveProject">Create Project</button>
+          </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="deleteModalOverlay">
+        <div class="modal-card">
+            <h3 style="color: #d32f2f;">Delete Project?</h3>
+            <p>This action cannot be undone. Please type <strong id="confirmProjectName"></strong> to confirm.</p>
+            
+            <div class="input-group">
+                <input type="text" id="deleteConfirmInput" placeholder="Type project name here">
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-text" id="cancelDelete">Cancel</button>
+                <button class="btn-primary" id="confirmDeleteBtn" style="background-color: #d32f2f;" disabled>Delete Forever</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/main.js" type="module">
+      
+    </script>
+</body>
+</html>
