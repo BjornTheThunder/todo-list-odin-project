@@ -375,3 +375,26 @@ body {
     background-color: #ccc !important;
     box-shadow: none;
 }
+
+/* Styling for the multi-line description input */
+#taskDescInput {
+    width: 100%;
+    padding: 10px 8px;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #fafafa;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    resize: none;
+    transition: all 0.2s;
+}
+
+#taskDescInput:focus {
+    border-bottom: 2px solid var(--primary-color);
+    background-color: var(--primary-light);
+}
+
+.input-group label {
+    margin-top: 12px;
+}

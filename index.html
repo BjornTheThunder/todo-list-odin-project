@@ -39,7 +39,7 @@
                         <span class="material-icons">delete</span> Delete Project
                     </button>
 
-                    <button class="btn-primary">
+                    <button class="btn-primary" id="new-task-button">
                         <span class="material-icons">add</span> New Task
                     </button>
                 </div>
@@ -103,6 +103,33 @@
             <div class="modal-actions">
                 <button class="btn-text" id="cancelDelete">Cancel</button>
                 <button class="btn-primary" id="confirmDeleteBtn" style="background-color: #d32f2f;" disabled>Delete Forever</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="taskModalOverlay">
+        <div class="modal-card">
+            <h3>Add New Task</h3>
+            <p>Assign a new task to <span id="targetProjectName" style="font-weight: 500;"></span></p>
+            
+            <div class="input-group">
+                <label for="taskTitleInput">Task Title</label>
+                <input type="text" id="taskTitleInput" placeholder="e.g., Design System Update">
+            </div>
+
+            <div class="input-group">
+                <label for="taskDescInput">Description</label>
+                <textarea id="taskDescInput" rows="3" placeholder="Briefly describe the task..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="taskDateInput">Due Date</label>
+                <input type="date" id="taskDateInput">
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-text" id="closeTaskModal">Cancel</button>
+                <button class="btn-primary" id="saveTaskBtn">Save Task</button>
             </div>
         </div>
     </div>
